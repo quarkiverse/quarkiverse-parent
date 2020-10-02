@@ -10,8 +10,8 @@
   <artifactId>quarkiverse-parent</artifactId>
   <version>1-SNAPSHOT</version>
 
-  <name>Quarkiverse: Parent</name>
-  <description>Quarkiverse Parent POM</description>
+  <name>Quarkiverse: Parent POM</name>
+  <description>Parent POM for Quarkiverse projects that includes the default release and artifact publishing related configuration</description>
   <url>https://quarkiverse.io</url>
 
   <inceptionYear>2020</inceptionYear>
