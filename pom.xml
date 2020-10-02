@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jboss</groupId>
+    <artifactId>jboss-parent</artifactId>
+    <version>37</version>
+  </parent>
+  <groupId>io.quarkiverse</groupId>
+  <artifactId>quarkiverse-parent</artifactId>
+  <version>1-SNAPSHOT</version>
+
+  <name>Quarkiverse: Parent</name>
+  <description>Quarkiverse Parent POM</description>
+  <url>https://quarkiverse.io</url>
+
+  <inceptionYear>2020</inceptionYear>
+
+  <packaging>pom</packaging>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/quarkusio/quarkus/issues</url>
+  </issueManagement>
+
+  <developers>
+    <developer>
+      <id>aloubyansky</id>
+      <name>Alexey Loubyansky</name>
+      <email>aloubyansky@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>https://www.redhat.com/</organizationUrl>
+    </developer>
+    <developer>
+      <id>gastaldi</id>
+      <name>George Gastaldi</name>
+      <email>ggastald@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>https://www.redhat.com/</organizationUrl>
+    </developer>
+    <developer>
+      <id>maxandersen</id>
+      <name>Max Rydahl Andersen</name>
+      <email>max@xam.dk</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>https://www.redhat.com/</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</connection>
+    <developerConnection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</developerConnection>
+    <url>https://github.com/quarkiverse/quarkiverse-parent</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>oss.sonatype</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>oss.sonatype</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <configuration>
+            <gpgArguments>
+              <arg>--pinentry-mode</arg>
+              <arg>loopback</arg>
+            </gpgArguments>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>1.6.8</version>
+          <configuration>
+            <stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${version.release.plugin}</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
+          <preparationGoals>verify</preparationGoals>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+              <serverId>oss.sonatype</serverId>
+              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>
