@@ -26,6 +26,9 @@
     <!-- Code format -->
     <version.quarkus.ide-config>1.8.1.Final</version.quarkus.ide-config>
     <format.skip>false</format.skip>
+    <!-- Default properties -->
+    <maven.compiler.parameters>true</maven.compiler.parameters>
+    <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
   </properties>
 
   <licenses>
@@ -131,16 +134,6 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <configuration>
-          <gpgArguments>
-            <arg>--pinentry-mode</arg>
-            <arg>loopback</arg>
-          </gpgArguments>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
@@ -161,6 +154,12 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
+            <configuration>
+              <gpgArguments>
+                <arg>--pinentry-mode</arg>
+                <arg>loopback</arg>
+              </gpgArguments>
+            </configuration>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
