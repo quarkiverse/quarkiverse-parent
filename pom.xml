@@ -138,7 +138,6 @@
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <tagNameFormat>@{project.version}</tagNameFormat>
-          <preparationGoals>verify</preparationGoals>
           <pushChanges>false</pushChanges>
           <localCheckout>true</localCheckout>
           <remoteTagging>false</remoteTagging>
