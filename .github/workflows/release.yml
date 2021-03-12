@@ -64,5 +64,6 @@ jobs:
       - name: Push tags
         uses: ad-m/github-push-action@v0.6.0
         with:
+          branch: ${{github.base_ref}}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           tags: true
