@@ -22,7 +22,7 @@
 
   <properties>
     <version.formatter.plugin>2.12.2</version.formatter.plugin>
-    <version.impsort.plugin>1.4.1</version.impsort.plugin>
+    <version.impsort.plugin>1.6.0</version.impsort.plugin>
     <!-- Code format -->
     <version.quarkus.ide-config>1.8.1.Final</version.quarkus.ide-config>
     <format.skip>false</format.skip>
