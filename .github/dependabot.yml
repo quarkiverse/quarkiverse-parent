@@ -4,3 +4,5 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    ignore:
+      - dependency-name: "io.quarkus:quarkus-ide-config"
