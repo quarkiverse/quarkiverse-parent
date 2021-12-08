@@ -25,11 +25,16 @@
     <version.formatter.plugin>2.17.1</version.formatter.plugin>
     <version.impsort.plugin>1.6.2</version.impsort.plugin>
     <!-- Code format -->
-    <version.quarkus.ide-config>1.12.2.Final</version.quarkus.ide-config>
+    <version.quarkus.ide-config>2.5.1.Final</version.quarkus.ide-config>
     <format.skip>false</format.skip>
     <!-- Default properties -->
     <maven.compiler.parameters>true</maven.compiler.parameters>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.release>11</maven.compiler.release>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
   <licenses>
