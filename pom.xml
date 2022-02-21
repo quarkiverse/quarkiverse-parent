@@ -35,6 +35,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+    <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
     <!-- Documentation -->
     <asciidoctorj.version>2.5.3</asciidoctorj.version>
     <asciidoctor-maven-plugin.version>2.2.2</asciidoctor-maven-plugin.version>
@@ -355,7 +356,7 @@
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.11</version>
+            <version>${nexus-staging-maven-plugin.version}</version>
             <extensions>true</extensions>
             <configuration>
               <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
