@@ -35,6 +35,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+    <jreleaser.version>1.2.0</jreleaser.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     <!-- Documentation -->
     <asciidoctorj.version>2.5.5</asciidoctorj.version>
@@ -109,6 +110,69 @@
           <pushChanges>false</pushChanges>
           <localCheckout>true</localCheckout>
           <remoteTagging>false</remoteTagging>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jreleaser</groupId>
+        <artifactId>jreleaser-maven-plugin</artifactId>
+        <configuration>
+          <jreleaser>
+            <release>
+              <github>
+                <owner>quarkiverse</owner>
+                <overwrite>true</overwrite>
+                <discussionCategoryName>Announcements</discussionCategoryName>
+                <changelog>
+                  <skipMergeCommits>true</skipMergeCommits>
+                  <formatted>ALWAYS</formatted>
+                  <labelers>
+                    <labeler>
+                      <label>maven_release</label>
+                      <title>regex:^\[maven-release-plugin\].*</title>
+                    </labeler>
+                    <labeler>
+                      <label>allcontributors1</label>
+                      <title>regex:^docs: update .all-contributorsrc.*</title>
+                      <order>-1</order>
+                    </labeler>
+                    <labeler>
+                      <label>allcontributors2</label>
+                      <title>regex:^docs: create .all-contributorsrc.*</title>
+                      <order>-2</order>
+                    </labeler>
+                  </labelers>
+                  <categories>
+                    <category>
+                      <title>release</title>
+                      <labels>
+                        <label>maven_release</label>
+                      </labels>
+                    </category>
+                    <category>
+                      <title>allcontributors</title>
+                      <labels>
+                        <label>allcontributors1</label>
+                        <label>allcontributors2</label>
+                      </labels>
+                    </category>
+                  </categories>
+                  <hide>
+                    <categories>
+                      <category>allcontributors</category>
+                      <category>release</category>
+                    </categories>
+                    <contributors>
+                      <contributor>GitHub</contributor>
+                      <contributor>allcontributors</contributor>
+                      <contributor>dependabot[bot]</contributor>
+                      <contributor>dependabot-preview[bot]</contributor>
+                      <contributor>quarkiversebot</contributor>
+                    </contributors>
+                  </hide>
+                </changelog>
+              </github>
+            </release>
+          </jreleaser>
         </configuration>
       </plugin>
     </plugins>
@@ -237,6 +301,11 @@
               <version>${asciidoctorj.version}</version>
             </dependency>
           </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.jreleaser</groupId>
+          <artifactId>jreleaser-maven-plugin</artifactId>
+          <version>${jreleaser.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
