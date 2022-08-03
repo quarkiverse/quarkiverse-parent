@@ -203,6 +203,9 @@
               <icons>font</icons>
               <!-- Antora images path -->
               <imagesdir>./_images/</imagesdir>
+              <!-- Examples path. Use symbolic links when referring to files outside the docs/ module -->
+              <!-- https://docs.antora.org/antora/latest/symlinks/ -->
+              <examples-dir>${project.basedir}/modules/ROOT/examples</examples-dir>
               <sectanchors>true</sectanchors>
               <!-- set the idprefix to blank -->
               <idprefix />
