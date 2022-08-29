@@ -117,6 +117,14 @@
         <artifactId>jreleaser-maven-plugin</artifactId>
         <configuration>
           <jreleaser>
+            <announce>
+              <zulip>
+                <active>ALWAYS</active>
+                <account>quarkus-bot@quarkusio.zulipchat.com</account>
+                <subject>{{projectNameCapitalized}} release</subject>
+                <apiHost>https://quarkusio.zulipchat.com/api/v1</apiHost>
+              </zulip>
+            </announce>
             <release>
               <github>
                 <owner>quarkiverse</owner>
