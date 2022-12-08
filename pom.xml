@@ -130,14 +130,6 @@
             <lineEnding>LF</lineEnding>
             <skip>${format.skip}</skip>
           </configuration>
-          <executions>
-            <execution>
-              <phase>process-sources</phase>
-              <goals>
-                <goal>format</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>net.revelc.code</groupId>
@@ -149,14 +141,6 @@
             <skip>${format.skip}</skip>
             <removeUnused>true</removeUnused>
           </configuration>
-          <executions>
-            <execution>
-              <id>sort-imports</id>
-              <goals>
-                <goal>sort</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -257,6 +241,7 @@
             <artifactId>formatter-maven-plugin</artifactId>
             <executions>
               <execution>
+                <id>format-sources</id>
                 <phase>process-sources</phase>
                 <goals>
                   <goal>format</goal>
@@ -273,6 +258,7 @@
             <executions>
               <execution>
                 <id>sort-imports</id>
+                <phase>process-sources</phase>
                 <goals>
                   <goal>sort</goal>
                 </goals>
