@@ -229,6 +229,7 @@
     <profile>
       <id>format</id>
       <activation>
+        <!-- This profile is effectively activated by default -->
         <property>
           <name>!no-format</name>
         </property>
