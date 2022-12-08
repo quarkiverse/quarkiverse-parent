@@ -229,7 +229,7 @@
     <profile>
       <id>format</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <!-- This profile is effectively activated by default -->
         <property>
           <name>!no-format</name>
         </property>
@@ -271,7 +271,6 @@
     <profile>
       <id>validate</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
         <property>
           <name>no-format</name>
         </property>
