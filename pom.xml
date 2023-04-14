@@ -25,7 +25,7 @@
     <version.formatter.plugin>2.22.0</version.formatter.plugin>
     <version.impsort.plugin>1.8.0</version.impsort.plugin>
     <!-- Code format -->
-    <version.quarkus.ide-config>2.5.1.Final</version.quarkus.ide-config>
+    <version.quarkus.ide-config>3.0.0.Final</version.quarkus.ide-config>
     <format.skip>false</format.skip>
     <!-- Default properties -->
     <maven.compiler.parameters>true</maven.compiler.parameters>
