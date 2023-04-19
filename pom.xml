@@ -87,6 +87,15 @@
     <url>https://github.com/quarkusio/quarkus/issues</url>
   </issueManagement>
 
+  <developers>
+    <developer>
+      <id>quarkiverse</id>
+      <name>Quarkiverse Community</name>
+      <organization>Quarkiverse</organization>
+      <organizationUrl>https://quarkiverse.io</organizationUrl>
+    </developer>
+  </developers>
+
   <scm>
     <connection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</connection>
     <developerConnection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</developerConnection>
