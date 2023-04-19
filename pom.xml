@@ -86,30 +86,6 @@
     <url>https://github.com/quarkusio/quarkus/issues</url>
   </issueManagement>
 
-  <developers>
-    <developer>
-      <id>aloubyansky</id>
-      <name>Alexey Loubyansky</name>
-      <email>alexey.loubyansky@redhat.com</email>
-      <organization>Red Hat</organization>
-      <organizationUrl>https://www.redhat.com/</organizationUrl>
-    </developer>
-    <developer>
-      <id>gastaldi</id>
-      <name>George Gastaldi</name>
-      <email>ggastald@redhat.com</email>
-      <organization>Red Hat</organization>
-      <organizationUrl>https://www.redhat.com/</organizationUrl>
-    </developer>
-    <developer>
-      <id>maxandersen</id>
-      <name>Max Rydahl Andersen</name>
-      <email>max@xam.dk</email>
-      <organization>Red Hat</organization>
-      <organizationUrl>https://www.redhat.com/</organizationUrl>
-    </developer>
-  </developers>
-
   <scm>
     <connection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</connection>
     <developerConnection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</developerConnection>
