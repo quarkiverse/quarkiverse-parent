@@ -1,5 +1,5 @@
 name: Quarkiverse Parent
 release:
-  current-version: "13"
+  current-version: "12"
   next-version: "999-SNAPSHOT"
 
