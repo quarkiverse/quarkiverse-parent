@@ -33,7 +33,7 @@
     <version.release.plugin>3.0.1</version.release.plugin>
     <version.resources.plugin>3.3.1</version.resources.plugin>
     <version.source.plugin>3.3.0</version.source.plugin>
-    <version.surefire.plugin>3.2.3</version.surefire.plugin>
+    <version.surefire.plugin>3.2.5</version.surefire.plugin>
 
     <!-- Code format -->
     <version.quarkus.ide-config>3.0.0.Final</version.quarkus.ide-config>
