@@ -8,7 +8,7 @@ on:
     inputs:
       tag:
         description: 'Tag to release'
-        required: false
+        required: true
 
 permissions:
   attestations: write
