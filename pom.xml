@@ -293,7 +293,6 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>${version.release.plugin}</version>
           <configuration>
-            <scmCommentPrefix>[ci skip] </scmCommentPrefix>
             <preparationGoals>clean install</preparationGoals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <tagNameFormat>@{project.version}</tagNameFormat>
