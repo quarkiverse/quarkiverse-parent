@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.quarkiverse</groupId>
   <artifactId>quarkiverse-parent</artifactId>
-  <version>20</version>
+  <version>999-SNAPSHOT</version>
 
   <name>Quarkiverse: Parent POM</name>
   <description>Parent POM for Quarkiverse projects that includes the default release and artifact publishing related
@@ -98,7 +98,7 @@
     <connection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</connection>
     <developerConnection>scm:git:git@github.com:quarkiverse/quarkiverse-parent.git</developerConnection>
     <url>https://github.com/quarkiverse/quarkiverse-parent</url>
-    <tag>20</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
