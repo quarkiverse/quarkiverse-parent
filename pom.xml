@@ -29,6 +29,7 @@
     <version.impsort.plugin>1.12.0</version.impsort.plugin>
     <version.javadoc.plugin>3.12.0</version.javadoc.plugin>
     <version.jar.plugin>3.4.2</version.jar.plugin>
+    <version.properties.plugin>1.2.1</version.properties.plugin>
     <version.release.plugin>3.1.1</version.release.plugin>
     <version.resources.plugin>3.3.1</version.resources.plugin>
     <version.source.plugin>3.3.1</version.source.plugin>
@@ -214,6 +215,11 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>buildnumber-maven-plugin</artifactId>
           <version>${version.buildnumber.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>properties-maven-plugin</artifactId>
+          <version>${version.properties.plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
