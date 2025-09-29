@@ -148,6 +148,20 @@
               </rules>
             </configuration>
           </execution>
+          <execution>
+            <id>validate-project-structure</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMatchingCoordinates>
+                  <groupIdPattern>io\.quarkiverse.*</groupIdPattern>
+                  <message>All Quarkiverse projects must have a groupId starting with 'io.quarkiverse'</message>
+                </requireMatchingCoordinates>
+              </rules>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
 
