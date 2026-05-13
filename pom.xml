@@ -18,6 +18,7 @@
   <properties>
     <!-- Plugin versions (please keep in alphabetical order) -->
     <version.buildhelper.plugin>3.6.1</version.buildhelper.plugin>
+    <version.documentation-rag.plugin>0.0.2</version.documentation-rag.plugin>
     <version.buildnumber.plugin>3.3.0</version.buildnumber.plugin>
     <version.clean.plugin>3.5.0</version.clean.plugin>
     <version.compiler.plugin>3.15.0</version.compiler.plugin>
@@ -454,6 +455,11 @@
           <artifactId>flatten-maven-plugin</artifactId>
           <version>${version.flatten.plugin}</version>
         </plugin>
+        <plugin>
+          <groupId>io.quarkus</groupId>
+          <artifactId>quarkus-documentation-rag-maven-plugin</artifactId>
+          <version>${version.documentation-rag.plugin}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
@@ -551,6 +557,30 @@
                 <phase>package</phase>
                 <goals>
                   <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>rag</id>
+      <activation>
+        <property>
+          <name>rag</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-documentation-rag-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>generate-extension-rag</id>
+                <goals>
+                  <goal>generate-rag</goal>
                 </goals>
               </execution>
             </executions>
