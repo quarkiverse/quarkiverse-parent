@@ -22,7 +22,7 @@ concurrency:
 jobs:
   perform-release:
     name: Perform Release
-    uses: quarkiverse/.github/.github/workflows/perform-release.yml@main
+    uses: quarkiverse/.github/.github/workflows/perform-release.yml@9e834ed1d98565e5c01ad7e4a778ec401eac3088 # main
     secrets: inherit
     with:
       version: ${{github.event.inputs.tag || github.ref_name}}
