@@ -14,5 +14,5 @@ jobs:
   prepare-release:
     name: Prepare Release
     if: ${{ github.event.pull_request.merged == true}}
-    uses: quarkiverse/.github/.github/workflows/prepare-release.yml@main
+    uses: quarkiverse/.github/.github/workflows/prepare-release.yml@5efa160376c2a40dd15cb3eec4a14d356e769dd7 # main
     secrets: inherit
