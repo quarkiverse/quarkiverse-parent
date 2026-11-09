@@ -26,7 +26,7 @@
     <version.deploy.plugin>3.2.0</version.deploy.plugin>
     <version.enforcer.plugin>3.7.0</version.enforcer.plugin>
     <version.failsafe.plugin>3.6.1</version.failsafe.plugin>
-    <version.flatten.plugin>1.8.0</version.flatten.plugin>
+    <version.flatten.plugin>1.9.0</version.flatten.plugin>
     <version.formatter.plugin>2.29.0</version.formatter.plugin>
     <version.impsort.plugin>1.13.0</version.impsort.plugin>
     <version.install.plugin>3.2.0</version.install.plugin>    
