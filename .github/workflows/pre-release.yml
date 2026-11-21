@@ -12,5 +12,5 @@ concurrency:
 jobs:
   pre-release:
     name: Pre-Release
-    uses: quarkiverse/.github/.github/workflows/pre-release.yml@main
+    uses: quarkiverse/.github/.github/workflows/pre-release.yml@aebefd24a86e6788823898c5906659997b236199 # main
     secrets: inherit
